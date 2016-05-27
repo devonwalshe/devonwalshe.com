@@ -29,7 +29,14 @@
 </head>
 <body>
 <div id="wrapper">
-	<img src="img/_MG_9590.JPG"></img>
+  <script type="text/javascript">
+  if(image == "./img/main_images/window.jpg"){
+    document.write('<img style="top:0px;" src="' + image + '">');
+  } else {
+    document.write('<img style="bottom:0px;" src="' + image + '">');
+  }
+    
+  </script>
 
 </div>
 <div id="infobox">
@@ -62,19 +69,6 @@
     	  </div>
   		</div>
 </div>
-<!-- <div id="tweets">Tweets</div>
-<div id ="twitter">
-  <div id="twitter_m">
-   <div id="twitter_container">
-   <ul id="twitter_update_list"></ul>
-   </div>
-  </div>
-</div> -->
 
-<script src="http://twitter.com/javascripts/blogger.js" type="text/javascript"></script>
-<script src="http://api.twitter.com/1/statuses/user_timeline/devonwalshe.json?callback=twitterCallback2&count=4" type="text/javascript"></script>
-
-
-
-</body>
+  </body>
 </html>

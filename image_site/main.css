@@ -2,10 +2,10 @@ body{
 	font-family:"Lato";
 }
 
-#welcome{
+/*#welcome{
   font-family:"Caudex";
   color:#dcecf1;
-}
+}*/
 
 h1{
 	font-family:Georgia, serif;
@@ -18,12 +18,24 @@ h4{
 }
 
 #wrapper img{
-	width:100%;
-	position:fixed;
-	vertical-align:middle;
-	margin:auto;
-	z-index:-100;
+/*  width:100%;
+  position:fixed;
+  vertical-align:middle;
+  margin:auto;
+  z-index:-100;*/
+  min-height: 100%;
+  min-width: 1024px;
+	
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+	
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
 }
+
 
 #wrapper{
 	position:absolute;
@@ -48,11 +60,6 @@ h4{
 	-moz-box-shadow: 0px 5px 25px #333;
 	-webkit-box-shadow: 0px 5px 25px #333;
 	box-shadow: 0px 5px 25px #333;
-/*  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-    filter: alpha(opacity=50);
-    -moz-opacity:0.5;
-    -khtml-opacity: 0.5;
-    opacity: 0.85;*/
 }
 
 #overlay{
@@ -139,78 +146,39 @@ h4{
   background-color:black;
 }
 
-/* Twitter */
 
-#tweets{
-  display:block;
-  padding:5px;
-  background:#cfd3e2;
-  position:absolute;
-  top:340px;
-  left:110px;
-  font-weight:bold;
-  font-size:1.3em;
-  font-family:"Arvo";
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-/*  text-shadow: 2px 2px #ddd;*/
-  color:#240E3D;
-}
 
-#twitter {
+/*Media queries*/
+
+@media only screen and (max-width: 768px) {
   
-position:absolute;
-top: 360px;
-left: 100px;
+  html { 
+    background: url(./img/main_images/surf.jpg) no-repeat left fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  
+  #infobox{
+  /*  background-image: url('img/linenbg.png');*/
+    background:#165D87;
+    position:absolute;
+    top:10%;
+    left:10%;
+    width: 70%;
+    padding:20px;
+    border-radius: 5px;
+    z-index:500;
+    -moz-border-radius: 25px;
+    -moz-box-shadow: 0px 5px 25px #333;
+    -webkit-box-shadow: 0px 5px 25px #333;
+    box-shadow: 0px 5px 25px #333;
+ }
+ 
+ #wrapper img{
+   display:none;
+ }
+ 
 
-/*  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-  filter: alpha(opacity=50);
-  -moz-opacity:0.5;
-  -khtml-opacity: 0.5;
-  opacity: 0.85;*/
 }
-
-#twitter_m {
-padding:0 20px 5px 20px;
-width: 250px;
-background:#240E3D;
--webkit-border-radius: 5px;
--moz-border-radius: 5px;
--moz-box-shadow: 0px 5px 25px #333;
--webkit-box-shadow: 0px 5px 25px #333;
-box-shadow: 0px 5px 25px #333;
-}
-
-#twitter_container {
-min-height:45px;
-height:auto !important;
-height:40px;
-}
-
-#twitter_update_list {
-width: 250px;
-padding:0;
-font-family: "Muli";
-font-size: .8em;
-font-style: italic;
-color: #ddd;
-line-height: 16px;
-font-weight:bold;
-}
-
-#twitter_update_list li {
-width: 250px;
-list-style: none;
-padding:15px 0 15px 0;
-border-bottom: solid 1px #777;
-}
-
-#twitter_update_list li a {
-color:#C3FDEF;
-text-decoration: none;
-}
-
-#twitter_update_list li a:hover {
-color: #EB5050;
-}
-
